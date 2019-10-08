@@ -5,14 +5,6 @@
  *   `$ ./gradlew buildSrcVersions`
  */
 object Libs {
-    const val io_pixeloutlaw_gradle_buildconfigkt_gradle_plugin: String =
-            "io.pixeloutlaw.gradle.buildconfigkt:io.pixeloutlaw.gradle.buildconfigkt.gradle.plugin:" +
-            Versions.io_pixeloutlaw_gradle_buildconfigkt_gradle_plugin
-
-    const val com_github_johnrengelman_shadow_gradle_plugin: String =
-            "com.github.johnrengelman.shadow:com.github.johnrengelman.shadow.gradle.plugin:" +
-            Versions.com_github_johnrengelman_shadow_gradle_plugin
-
     const val com_diffplug_gradle_spotless_gradle_plugin: String =
             "com.diffplug.gradle.spotless:com.diffplug.gradle.spotless.gradle.plugin:" +
             Versions.com_diffplug_gradle_spotless_gradle_plugin
@@ -45,49 +37,11 @@ object Libs {
             "org.jetbrains.dokka:org.jetbrains.dokka.gradle.plugin:" +
             Versions.org_jetbrains_dokka_gradle_plugin
 
-    const val com_moowork_node_gradle_plugin: String =
-            "com.moowork.node:com.moowork.node.gradle.plugin:" +
-            Versions.com_moowork_node_gradle_plugin
-
-    /**
-     * https://github.com/PixelOutlaw/spigot-plugin-parent
-     */
-    const val config: String = "io.pixeloutlaw.spigot-commons:config:" +
-            Versions.io_pixeloutlaw_spigot_commons
-
-    /**
-     * https://github.com/PixelOutlaw/spigot-plugin-parent
-     */
-    const val fanciful: String = "io.pixeloutlaw.spigot-commons:fanciful:" +
-            Versions.io_pixeloutlaw_spigot_commons
-
-    /**
-     * https://github.com/PixelOutlaw/spigot-plugin-parent
-     */
-    const val hilt: String = "io.pixeloutlaw.spigot-commons:hilt:" +
-            Versions.io_pixeloutlaw_spigot_commons
-
     const val nebula_project_gradle_plugin: String =
             "nebula.project:nebula.project.gradle.plugin:" + Versions.nebula_project_gradle_plugin
 
     const val nebula_release_gradle_plugin: String =
             "nebula.release:nebula.release.gradle.plugin:" + Versions.nebula_release_gradle_plugin
-
-    const val auto_service: String = "com.google.auto.service:auto-service:" +
-            Versions.com_google_auto_service
-
-    const val auto_service_annotations: String =
-            "com.google.auto.service:auto-service-annotations:" + Versions.com_google_auto_service
-
-    /**
-     * https://junit.org/junit5/
-     */
-    const val junit_platform_launcher: String = "org.junit.platform:junit-platform-launcher"
-
-    /**
-     * https://junit.org/junit5/
-     */
-    const val junit_vintage_engine: String = "org.junit.vintage:junit-vintage-engine"
 
     /**
      * https://kotlinlang.org/
@@ -115,23 +69,6 @@ object Libs {
     const val kotlin_stdlib_jdk8: String = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:" +
             Versions.org_jetbrains_kotlin
 
-    /**
-     * https://github.com/square/moshi
-     */
-    const val moshi: String = "com.squareup.moshi:moshi:" + Versions.com_squareup_moshi
-
-    /**
-     * https://github.com/square/moshi
-     */
-    const val moshi_adapters: String = "com.squareup.moshi:moshi-adapters:" +
-            Versions.com_squareup_moshi
-
-    /**
-     * https://github.com/square/moshi
-     */
-    const val moshi_kotlin_codegen: String = "com.squareup.moshi:moshi-kotlin-codegen:" +
-            Versions.com_squareup_moshi
-
     const val worldguard_bukkit: String = "com.sk89q.worldguard:worldguard-bukkit:" +
             Versions.worldguard_bukkit
 
@@ -139,43 +76,21 @@ object Libs {
             Versions.worldguard_legacy
 
     /**
-     * https://bstats.org/
-     */
-    const val bstats_bukkit: String = "org.bstats:bstats-bukkit:" + Versions.bstats_bukkit
-
-    /**
      * https://junit.org/junit5/
      */
     const val junit_jupiter: String = "org.junit.jupiter:junit-jupiter:" + Versions.junit_jupiter
-
-    /**
-     * https://commons.apache.org/proper/commons-text
-     */
-    const val commons_text: String = "org.apache.commons:commons-text:" + Versions.commons_text
 
     /**
      * https://github.com/mockito/mockito
      */
     const val mockito_core: String = "org.mockito:mockito-core:" + Versions.mockito_core
 
-    /**
-     * https://github.com/zafarkhaja/jsemver
-     */
-    const val java_semver: String = "com.github.zafarkhaja:java-semver:" + Versions.java_semver
-
     const val spigot_api: String = "org.spigotmc:spigot-api:" + Versions.spigot_api
-
-    const val acf_paper: String = "co.aikar:acf-paper:" + Versions.acf_paper
 
     /**
      * https://junit.org/junit5/
      */
     const val junit_bom: String = "org.junit:junit-bom:" + Versions.junit_bom
-
-    /**
-     * http://junit.org
-     */
-    const val junit: String = "junit:junit:" + Versions.junit
 
     /**
      * http://mockk.io
@@ -186,9 +101,4 @@ object Libs {
      * http://github.com/google/truth
      */
     const val truth: String = "com.google.truth:truth:" + Versions.truth
-
-    /**
-     * https://github.com/shyiko/klob
-     */
-    const val klob: String = "com.github.shyiko.klob:klob:" + Versions.klob
 }

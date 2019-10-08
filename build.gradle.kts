@@ -1,4 +1,3 @@
-
 import com.diffplug.gradle.spotless.SpotlessExtension
 import com.diffplug.gradle.spotless.SpotlessPlugin
 import io.gitlab.arturbosch.detekt.DetektPlugin
@@ -75,12 +74,16 @@ subprojects {
         }
         this@subprojects.tasks.getByName<DokkaTask>("dokka") {
             outputFormat = "html"
-            jdkVersion = 8
+            configuration {
+                jdkVersion = 8
+            }
         }
         val dokkaJavadoc = this@subprojects.tasks.create("dokkaJavadoc", DokkaTask::class.java) {
             outputDirectory = "${project.buildDir}/javadoc"
             outputFormat = "javadoc"
-            jdkVersion = 8
+            configuration {
+                jdkVersion = 8
+            }
         }
         this@subprojects.tasks.getByName<Jar>("javadocJar") {
             dependsOn(dokkaJavadoc)

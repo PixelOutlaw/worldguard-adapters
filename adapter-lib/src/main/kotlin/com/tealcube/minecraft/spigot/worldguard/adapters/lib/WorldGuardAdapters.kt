@@ -24,9 +24,9 @@ package com.tealcube.minecraft.spigot.worldguard.adapters.lib
 import com.tealcube.minecraft.spigot.worldguard.adapters.WorldGuardAdapter
 import com.tealcube.minecraft.spigot.worldguard.adapters.v6_2_x.WorldGuardAdapter62X
 import com.tealcube.minecraft.spigot.worldguard.adapters.v7_0_x.WorldGuardAdapter70X
-import org.bukkit.Bukkit
 import java.util.logging.Level
 import java.util.logging.Logger
+import org.bukkit.Bukkit
 
 object WorldGuardAdapters {
     private val logger: Logger = Logger.getLogger(WorldGuardAdapters::class.java.canonicalName)
