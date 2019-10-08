@@ -16,6 +16,6 @@ jobs:
         env:
           BINTRAY_USER: ${{ secrets.BINTRAY_USER }}
           BINTRAY_APIKEY: ${{ secrets.BINTRAY_APIKEY }}
-        run: 'printf "bintray.user=$BINTRAY_USER\bintray.apiKey=$BINTRAY_APIKEY" > ~/.gradle/gradle.properties'
+        run: 'mkdir ~/.gradle && printf "bintray.user=$BINTRAY_USER\bintray.apiKey=$BINTRAY_APIKEY" > ~/.gradle/gradle.properties'
       - name: Build with Gradle
         run: chmod +x ./gradlew && ./gradlew publishAllPublicationsToBintrayRepository -Prelease.useLastTag=true
