@@ -5,44 +5,6 @@
  *   `$ ./gradlew buildSrcVersions`
  */
 object Libs {
-    const val com_diffplug_gradle_spotless_gradle_plugin: String =
-            "com.diffplug.gradle.spotless:com.diffplug.gradle.spotless.gradle.plugin:" +
-            Versions.com_diffplug_gradle_spotless_gradle_plugin
-
-    const val io_gitlab_arturbosch_detekt_gradle_plugin: String =
-            "io.gitlab.arturbosch.detekt:io.gitlab.arturbosch.detekt.gradle.plugin:" +
-            Versions.io_gitlab_arturbosch_detekt_gradle_plugin
-
-    const val de_fayard_buildsrcversions_gradle_plugin: String =
-            "de.fayard.buildSrcVersions:de.fayard.buildSrcVersions.gradle.plugin:" +
-            Versions.de_fayard_buildsrcversions_gradle_plugin
-
-    const val org_jetbrains_kotlin_jvm_gradle_plugin: String =
-            "org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin:" +
-            Versions.org_jetbrains_kotlin_jvm_gradle_plugin
-
-    const val com_gradle_build_scan_gradle_plugin: String =
-            "com.gradle.build-scan:com.gradle.build-scan.gradle.plugin:" +
-            Versions.com_gradle_build_scan_gradle_plugin
-
-    const val nebula_nebula_bintray_gradle_plugin: String =
-            "nebula.nebula-bintray:nebula.nebula-bintray.gradle.plugin:" +
-            Versions.nebula_nebula_bintray_gradle_plugin
-
-    const val nebula_maven_publish_gradle_plugin: String =
-            "nebula.maven-publish:nebula.maven-publish.gradle.plugin:" +
-            Versions.nebula_maven_publish_gradle_plugin
-
-    const val org_jetbrains_dokka_gradle_plugin: String =
-            "org.jetbrains.dokka:org.jetbrains.dokka.gradle.plugin:" +
-            Versions.org_jetbrains_dokka_gradle_plugin
-
-    const val nebula_project_gradle_plugin: String =
-            "nebula.project:nebula.project.gradle.plugin:" + Versions.nebula_project_gradle_plugin
-
-    const val nebula_release_gradle_plugin: String =
-            "nebula.release:nebula.release.gradle.plugin:" + Versions.nebula_release_gradle_plugin
-
     /**
      * https://kotlinlang.org/
      */
@@ -68,6 +30,40 @@ object Libs {
      */
     const val kotlin_stdlib_jdk8: String = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:" +
             Versions.org_jetbrains_kotlin
+
+    const val com_diffplug_gradle_spotless_gradle_plugin: String =
+            "com.diffplug.gradle.spotless:com.diffplug.gradle.spotless.gradle.plugin:" +
+            Versions.com_diffplug_gradle_spotless_gradle_plugin
+
+    const val io_gitlab_arturbosch_detekt_gradle_plugin: String =
+            "io.gitlab.arturbosch.detekt:io.gitlab.arturbosch.detekt.gradle.plugin:" +
+            Versions.io_gitlab_arturbosch_detekt_gradle_plugin
+
+    const val de_fayard_buildsrcversions_gradle_plugin: String =
+            "de.fayard.buildSrcVersions:de.fayard.buildSrcVersions.gradle.plugin:" +
+            Versions.de_fayard_buildsrcversions_gradle_plugin
+
+    const val org_jetbrains_kotlin_jvm_gradle_plugin: String =
+            "org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin:" +
+            Versions.org_jetbrains_kotlin_jvm_gradle_plugin
+
+    const val nebula_nebula_bintray_gradle_plugin: String =
+            "nebula.nebula-bintray:nebula.nebula-bintray.gradle.plugin:" +
+            Versions.nebula_nebula_bintray_gradle_plugin
+
+    const val nebula_maven_publish_gradle_plugin: String =
+            "nebula.maven-publish:nebula.maven-publish.gradle.plugin:" +
+            Versions.nebula_maven_publish_gradle_plugin
+
+    const val org_jetbrains_dokka_gradle_plugin: String =
+            "org.jetbrains.dokka:org.jetbrains.dokka.gradle.plugin:" +
+            Versions.org_jetbrains_dokka_gradle_plugin
+
+    const val nebula_project_gradle_plugin: String =
+            "nebula.project:nebula.project.gradle.plugin:" + Versions.nebula_project_gradle_plugin
+
+    const val nebula_release_gradle_plugin: String =
+            "nebula.release:nebula.release.gradle.plugin:" + Versions.nebula_release_gradle_plugin
 
     const val worldguard_bukkit: String = "com.sk89q.worldguard:worldguard-bukkit:" +
             Versions.worldguard_bukkit

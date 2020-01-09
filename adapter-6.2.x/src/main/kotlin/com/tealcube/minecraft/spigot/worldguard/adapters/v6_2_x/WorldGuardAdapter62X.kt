@@ -30,6 +30,7 @@ import org.bukkit.Location
 import org.bukkit.entity.Player
 
 class WorldGuardAdapter62X : WorldGuardAdapter {
+    private val nullPlayer: Player? = null
     private val regionContainer: RegionContainer by lazy {
         WGBukkit.getPlugin().regionContainer
     }
@@ -50,10 +51,10 @@ class WorldGuardAdapter62X : WorldGuardAdapter {
     private fun getRegionQuery() = regionContainer.createQuery()
 
     private fun isFlagAllowAtLocation(location: Location, flag: StateFlag) =
-        getRegionQuery().testState(location, null as? Player, flag)
+        getRegionQuery().testState(location, nullPlayer, flag)
 
     private fun isFlagDenyAtLocation(location: Location, flag: StateFlag) =
-        !getRegionQuery().testState(location, null as? Player, flag)
+        !getRegionQuery().testState(location, nullPlayer, flag)
 
     private fun getFlagFromRegistry(flagName: String): StateFlag? = flagRegistry.get(flagName) as? StateFlag
 }

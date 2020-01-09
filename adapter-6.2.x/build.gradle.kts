@@ -4,7 +4,7 @@ plugins {
 }
 
 dependencies {
-    compileOnly("com.github.EngineHub.WorldGuard:worldguard-legacy:hotfix~1.12.2-explosion-SNAPSHOT")
+    compileOnly(Libs.worldguard_legacy)
     implementation(Libs.kotlin_stdlib_jdk8)
     api(project(":adapter-api"))
 }
