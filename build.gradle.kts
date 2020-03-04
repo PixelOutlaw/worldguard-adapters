@@ -25,7 +25,6 @@ subprojects {
     this@subprojects.version = rootProject.version
     pluginManager.withPlugin("java") {
         this@subprojects.pluginManager.apply(NebulaResponsiblePlugin::class.java)
-        this@subprojects.pluginManager.apply(BintrayPlugin::class.java)
         this@subprojects.pluginManager.apply(SpotlessPlugin::class.java)
 
         this@subprojects.tasks.withType<Test> {
