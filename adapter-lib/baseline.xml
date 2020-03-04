@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
 <SmellBaseline>
   <Blacklist></Blacklist>
-  <Whitelist></Whitelist>
+  <Whitelist>
+    <ID>TooGenericExceptionCaught:WorldGuardAdapters.kt$WorldGuardAdapters$ex: Exception</ID>
+  </Whitelist>
 </SmellBaseline>
