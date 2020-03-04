@@ -86,13 +86,13 @@ subprojects {
         }
     }
 }
-//
-// bintray {
-//     pkgName.value("worldguard-adapters")
-//     repo.value("pixeloutlaw-jars")
-//     userOrg.value("pixeloutlaw")
-//     syncToMavenCentral.value(false)
-// }
+
+bintray {
+    pkgName.value("worldguard-adapters")
+    repo.value("pixeloutlaw-jars")
+    userOrg.value("pixeloutlaw")
+    syncToMavenCentral.value(false)
+}
 
 tasks.withType<Wrapper> {
     gradleVersion = Versions.gradleLatestVersion
