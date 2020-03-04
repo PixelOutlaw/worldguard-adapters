@@ -40,8 +40,8 @@ object WorldGuardAdapters {
                     startsWith("6.2") -> WorldGuardAdapter62X()
                     startsWith("7.0") -> WorldGuardAdapter70X()
                     else -> {
-                        logger.warning("Using an unsupported WorldGuard version! Defaulting to 7.0.x adapter!")
-                        WorldGuardAdapter70X()
+                        logger.warning("Using an unsupported WorldGuard version! Defaulting to no-op!")
+                        NoOpWorldGuardAdapter
                     }
                 }
             }
