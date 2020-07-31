@@ -32,6 +32,7 @@ import org.bukkit.Location
 
 class WorldGuardAdapter70X : WorldGuardAdapter {
     // we had to change this due to WG 7.0.4 not always having a platform for some reason
+    @Suppress("detekt.TooGenericExceptionCaught")
     private val worldGuardPlatform: WorldGuardPlatform?
         get() = try {
             WorldGuard.getInstance().platform
