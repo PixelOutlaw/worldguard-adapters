@@ -33,6 +33,12 @@ object Libs {
     const val kotlin_stdlib_jdk8: String = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:" +
             Versions.org_jetbrains_kotlin
 
+    const val javadoc_plugin: String = "org.jetbrains.dokka:javadoc-plugin:" +
+            Versions.org_jetbrains_dokka
+
+    const val org_jetbrains_dokka_gradle_plugin: String =
+            "org.jetbrains.dokka:org.jetbrains.dokka.gradle.plugin:" + Versions.org_jetbrains_dokka
+
     const val com_diffplug_gradle_spotless_gradle_plugin: String =
             "com.diffplug.gradle.spotless:com.diffplug.gradle.spotless.gradle.plugin:" +
             Versions.com_diffplug_gradle_spotless_gradle_plugin
@@ -56,10 +62,6 @@ object Libs {
     const val nebula_maven_publish_gradle_plugin: String =
             "nebula.maven-publish:nebula.maven-publish.gradle.plugin:" +
             Versions.nebula_maven_publish_gradle_plugin
-
-    const val org_jetbrains_dokka_gradle_plugin: String =
-            "org.jetbrains.dokka:org.jetbrains.dokka.gradle.plugin:" +
-            Versions.org_jetbrains_dokka_gradle_plugin
 
     const val nebula_project_gradle_plugin: String =
             "nebula.project:nebula.project.gradle.plugin:" + Versions.nebula_project_gradle_plugin
