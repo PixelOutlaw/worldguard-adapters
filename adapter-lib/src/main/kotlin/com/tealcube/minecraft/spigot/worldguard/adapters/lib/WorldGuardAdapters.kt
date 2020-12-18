@@ -22,10 +22,10 @@
 package com.tealcube.minecraft.spigot.worldguard.adapters.lib
 
 import com.tealcube.minecraft.spigot.worldguard.adapters.IWorldGuardAdapter
-import java.util.logging.Level
-import java.util.logging.Logger
 import org.bukkit.Bukkit
 import org.bukkit.Location
+import java.util.logging.Level
+import java.util.logging.Logger
 
 object WorldGuardAdapters : IWorldGuardAdapter {
     private val logger: Logger = Logger.getLogger(WorldGuardAdapters::class.java.canonicalName)
