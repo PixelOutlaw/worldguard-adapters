@@ -4,6 +4,6 @@ plugins {
 }
 
 dependencies {
-    compileOnly(Libs.spigot_api)
-    implementation(Libs.kotlin_stdlib_jdk8)
+    compileOnly("org.spigotmc:spigot-api:_")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:_")
 }

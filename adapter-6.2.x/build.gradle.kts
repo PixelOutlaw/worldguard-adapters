@@ -1,11 +1,12 @@
 plugins {
     kotlin("jvm")
-    kotlin("kapt")
 }
 
 dependencies {
-    compileOnly(Libs.spigot_api)
-    compileOnly(Libs.worldguard_legacy)
-    implementation(Libs.kotlin_stdlib_jdk8)
+    compileOnly("org.spigotmc:spigot-api:_")
+    compileOnly("com.sk89q.worldguard:worldguard-legacy:_")
+
     api(project(":adapter-api"))
+
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:_")
 }
