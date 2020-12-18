@@ -21,24 +21,22 @@
  */
 package com.tealcube.minecraft.spigot.worldguard.adapters.lib
 
-import com.tealcube.minecraft.spigot.worldguard.adapters.WorldGuardAdapter
-import com.tealcube.minecraft.spigot.worldguard.adapters.v6_2_x.WorldGuardAdapter62X
-import com.tealcube.minecraft.spigot.worldguard.adapters.v7_0_x.WorldGuardAdapter70X
+import com.tealcube.minecraft.spigot.worldguard.adapters.IWorldGuardAdapter
 import java.util.logging.Level
 import java.util.logging.Logger
 import org.bukkit.Bukkit
+import org.bukkit.Location
 
-object WorldGuardAdapters {
+object WorldGuardAdapters : IWorldGuardAdapter {
     private val logger: Logger = Logger.getLogger(WorldGuardAdapters::class.java.canonicalName)
-    @JvmStatic
-    val instance: WorldGuardAdapter by lazy {
+    private val internalAdapter: IWorldGuardAdapter by lazy {
         val worldGuardPlugin = Bukkit.getPluginManager().getPlugin("WorldGuard") ?: return@lazy NoOpWorldGuardAdapter
         return@lazy try {
             val versionOfWorldGuard = worldGuardPlugin.description.version
             with(versionOfWorldGuard) {
                 when {
-                    startsWith("6.2") -> WorldGuardAdapter62X()
-                    startsWith("7.0") -> WorldGuardAdapter70X()
+                    startsWith("6.2") -> com.tealcube.minecraft.spigot.worldguard.adapters.v6_2_x.WorldGuardAdapter62X
+                    startsWith("7.0") -> com.tealcube.minecraft.spigot.worldguard.adapters.v7_0_x.WorldGuardAdapter70X
                     else -> {
                         logger.warning("Using an unsupported WorldGuard version! Defaulting to no-op!")
                         NoOpWorldGuardAdapter
@@ -50,4 +48,12 @@ object WorldGuardAdapters {
             NoOpWorldGuardAdapter
         }
     }
+
+    override fun isFlagAllowAtLocation(location: Location, flagName: String): Boolean =
+        internalAdapter.isFlagAllowAtLocation(location, flagName)
+
+    override fun isFlagDenyAtLocation(location: Location, flagName: String): Boolean =
+        internalAdapter.isFlagDenyAtLocation(location, flagName)
+
+    override fun registerFlag(flagName: String) = internalAdapter.registerFlag(flagName)
 }

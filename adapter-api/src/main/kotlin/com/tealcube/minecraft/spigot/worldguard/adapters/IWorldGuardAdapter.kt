@@ -26,7 +26,7 @@ import org.bukkit.Location
 /**
  * An adapter for checking flag statuses at a location.
  */
-interface WorldGuardAdapter {
+interface IWorldGuardAdapter {
     /**
      * Returns true if flag is allow at location.
      *

@@ -27,10 +27,10 @@ import com.sk89q.worldguard.internal.platform.WorldGuardPlatform
 import com.sk89q.worldguard.protection.flags.StateFlag
 import com.sk89q.worldguard.protection.flags.registry.FlagRegistry
 import com.sk89q.worldguard.protection.regions.RegionContainer
-import com.tealcube.minecraft.spigot.worldguard.adapters.WorldGuardAdapter
+import com.tealcube.minecraft.spigot.worldguard.adapters.IWorldGuardAdapter
 import org.bukkit.Location
 
-class WorldGuardAdapter70X : WorldGuardAdapter {
+object WorldGuardAdapter70X : IWorldGuardAdapter {
     // we had to change this due to WG 7.0.4 not always having a platform for some reason
     @Suppress("detekt.TooGenericExceptionCaught")
     private val worldGuardPlatform: WorldGuardPlatform?

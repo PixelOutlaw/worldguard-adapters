@@ -25,11 +25,11 @@ import com.sk89q.worldguard.bukkit.RegionContainer
 import com.sk89q.worldguard.bukkit.WGBukkit
 import com.sk89q.worldguard.protection.flags.StateFlag
 import com.sk89q.worldguard.protection.flags.registry.FlagRegistry
-import com.tealcube.minecraft.spigot.worldguard.adapters.WorldGuardAdapter
+import com.tealcube.minecraft.spigot.worldguard.adapters.IWorldGuardAdapter
 import org.bukkit.Location
 import org.bukkit.entity.Player
 
-class WorldGuardAdapter62X : WorldGuardAdapter {
+object WorldGuardAdapter62X : IWorldGuardAdapter {
     private val nullPlayer: Player? = null
     private val regionContainer: RegionContainer by lazy {
         WGBukkit.getPlugin().regionContainer

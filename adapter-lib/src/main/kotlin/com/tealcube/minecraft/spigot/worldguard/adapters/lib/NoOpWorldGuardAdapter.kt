@@ -21,13 +21,13 @@
  */
 package com.tealcube.minecraft.spigot.worldguard.adapters.lib
 
-import com.tealcube.minecraft.spigot.worldguard.adapters.WorldGuardAdapter
+import com.tealcube.minecraft.spigot.worldguard.adapters.IWorldGuardAdapter
 import org.bukkit.Location
 
 /**
- * NoOp implementation of [WorldGuardAdapter].
+ * NoOp implementation of [IWorldGuardAdapter].
  */
-object NoOpWorldGuardAdapter : WorldGuardAdapter {
+internal object NoOpWorldGuardAdapter : IWorldGuardAdapter {
     // do nothing, return true if no WorldGuard
     override fun isFlagAllowAtLocation(location: Location, flagName: String): Boolean = true
 
