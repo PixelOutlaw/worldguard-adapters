@@ -1,8 +1,8 @@
 plugins {
-    kotlin("jvm") version "1.4.21" apply false
-    id("nebula.nebula-bintray") version "8.5.0"
-    id("nebula.release") version "15.3.0"
-    id("io.pixeloutlaw.multi") version "0.6.0"
+    kotlin("jvm") apply false
+    id("nebula.nebula-bintray")
+    id("nebula.release")
+    id("io.pixeloutlaw.multi")
 }
 
 subprojects {
@@ -17,6 +17,6 @@ bintray {
 }
 
 tasks.withType<Wrapper> {
-    gradleVersion = "6.7.1"
+    gradleVersion = "6.8.1"
     distributionType = Wrapper.DistributionType.ALL
 }

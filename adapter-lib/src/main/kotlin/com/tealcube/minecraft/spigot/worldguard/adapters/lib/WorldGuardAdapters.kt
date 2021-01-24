@@ -24,27 +24,27 @@ package com.tealcube.minecraft.spigot.worldguard.adapters.lib
 import com.tealcube.minecraft.spigot.worldguard.adapters.IWorldGuardAdapter
 import org.bukkit.Bukkit
 import org.bukkit.Location
+import saschpe.log4k.Log
 import java.util.logging.Level
 import java.util.logging.Logger
 
 object WorldGuardAdapters : IWorldGuardAdapter {
-    private val logger: Logger = Logger.getLogger(WorldGuardAdapters::class.java.canonicalName)
     private val internalAdapter: IWorldGuardAdapter by lazy {
         val worldGuardPlugin = Bukkit.getPluginManager().getPlugin("WorldGuard") ?: return@lazy NoOpWorldGuardAdapter
-        return@lazy try {
+        try {
             val versionOfWorldGuard = worldGuardPlugin.description.version
             with(versionOfWorldGuard) {
                 when {
                     startsWith("6.2") -> com.tealcube.minecraft.spigot.worldguard.adapters.v6_2_x.WorldGuardAdapter62X
                     startsWith("7.0") -> com.tealcube.minecraft.spigot.worldguard.adapters.v7_0_x.WorldGuardAdapter70X
                     else -> {
-                        logger.warning("Using an unsupported WorldGuard version! Defaulting to no-op!")
+                        Log.warn("Using an unsupported WorldGuard version! Defaulting to no-op!")
                         NoOpWorldGuardAdapter
                     }
                 }
             }
         } catch (ex: Exception) {
-            logger.log(Level.WARNING, "Unable to find correct WorldGuardAdapter, defaulting to no-op!", ex)
+            Log.warn("Unable to find correct WorldGuardAdapter, defaulting to no-op!", ex)
             NoOpWorldGuardAdapter
         }
     }
