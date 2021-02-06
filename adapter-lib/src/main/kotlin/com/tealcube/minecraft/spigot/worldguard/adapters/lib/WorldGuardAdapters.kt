@@ -25,8 +25,6 @@ import com.tealcube.minecraft.spigot.worldguard.adapters.IWorldGuardAdapter
 import org.bukkit.Bukkit
 import org.bukkit.Location
 import saschpe.log4k.Log
-import java.util.logging.Level
-import java.util.logging.Logger
 
 object WorldGuardAdapters : IWorldGuardAdapter {
     private val internalAdapter: IWorldGuardAdapter by lazy {
