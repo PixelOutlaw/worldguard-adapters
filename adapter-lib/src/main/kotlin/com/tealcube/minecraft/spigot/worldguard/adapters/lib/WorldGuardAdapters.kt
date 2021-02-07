@@ -22,9 +22,9 @@
 package com.tealcube.minecraft.spigot.worldguard.adapters.lib
 
 import com.tealcube.minecraft.spigot.worldguard.adapters.IWorldGuardAdapter
+import io.pixeloutlaw.kindling.Log
 import org.bukkit.Bukkit
 import org.bukkit.Location
-import saschpe.log4k.Log
 
 object WorldGuardAdapters : IWorldGuardAdapter {
     private val internalAdapter: IWorldGuardAdapter by lazy {
