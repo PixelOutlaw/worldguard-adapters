@@ -2,6 +2,6 @@
 <SmellBaseline>
   <Blacklist></Blacklist>
   <Whitelist>
-    <ID>PackageNaming:WorldGuardAdapter70X.kt$package com.tealcube.minecraft.spigot.worldguard.adapters.v7_0_x</ID>
+    <ID>PackageNaming:WorldGuardAdapter70X.kt$package com.tealcube.minecraft.spigot.worldguard.adapters.v70x</ID>
   </Whitelist>
 </SmellBaseline>

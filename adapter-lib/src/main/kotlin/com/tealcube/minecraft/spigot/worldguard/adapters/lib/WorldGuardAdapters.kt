@@ -33,8 +33,8 @@ object WorldGuardAdapters : IWorldGuardAdapter {
             val versionOfWorldGuard = worldGuardPlugin.description.version
             with(versionOfWorldGuard) {
                 when {
-                    startsWith("6.2") -> com.tealcube.minecraft.spigot.worldguard.adapters.v6_2_x.WorldGuardAdapter62X
-                    startsWith("7.0") -> com.tealcube.minecraft.spigot.worldguard.adapters.v7_0_x.WorldGuardAdapter70X
+                    startsWith("6.2") -> com.tealcube.minecraft.spigot.worldguard.adapters.v62x.WorldGuardAdapter
+                    startsWith("7.0") -> com.tealcube.minecraft.spigot.worldguard.adapters.v70x.WorldGuardAdapter
                     else -> {
                         Log.warn("Using an unsupported WorldGuard version! Defaulting to no-op!")
                         NoOpWorldGuardAdapter
