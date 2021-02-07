@@ -41,8 +41,8 @@ object WorldGuardAdapters : IWorldGuardAdapter {
                     }
                 }
             }
-        } catch (ex: Exception) {
-            Log.warn("Unable to find correct WorldGuardAdapter, defaulting to no-op!", ex)
+        } catch (expected: Exception) {
+            Log.warn("Unable to find correct WorldGuardAdapter, defaulting to no-op!", expected)
             NoOpWorldGuardAdapter
         }
     }
