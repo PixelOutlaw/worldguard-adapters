@@ -16,7 +16,7 @@ gradle.allprojects {
             url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots")
         }
         maven {
-            url = uri("https://maven.sk89q.com/artifactory/repo")
+            url = uri("https://maven.enginehub.org/repo")
         }
         maven {
             url = uri("https://oss.sonatype.org/content/repositories/snapshots")
