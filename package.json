@@ -1,0 +1,69 @@
+{
+  "name": "@mythicdrops/worldguard-adapters",
+  "private": true,
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "postinstall": "is-ci || husky install",
+    "release": "semantic-release"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
+    "@semantic-release/changelog": "5.0.1",
+    "@semantic-release/commit-analyzer": "8.0.1",
+    "@semantic-release/git": "9.0.0",
+    "@semantic-release/github": "7.2.0",
+    "@semantic-release/release-notes-generator": "9.0.1",
+    "commitizen": "4.2.3",
+    "cz-conventional-changelog": "3.3.0",
+    "husky": "5.0.9",
+    "is-ci": "2.0.0",
+    "prettier": "2.2.1",
+    "prettier-plugin-pkg": "0.8.0",
+    "prettier-plugin-sh": "0.6.0",
+    "pretty-quick": "3.1.0",
+    "semantic-release": "17.3.9"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "gradle-semantic-release-plugin",
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            {
+              "path": "**/build/libs/*.jar"
+            }
+          ]
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "gradle.properties",
+            "CHANGELOG.md"
+          ]
+        }
+      ]
+    ]
+  },
+  "volta": {
+    "node": "14.15.5",
+    "npm": "7.5.4",
+    "yarn": "1.22.10"
+  }
+}
