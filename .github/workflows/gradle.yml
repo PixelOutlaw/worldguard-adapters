@@ -120,8 +120,8 @@ jobs:
         run: ./gradlew wrapper --gradle-version 6.8.2
       - name: Run Semantic Release
         run: |
-          yarn install --immutable
-          yarn dlx semantic-release
+          npm ci
+          npm run semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }}
           ORG_GRADLE_PROJECT_signingKey: ${{ secrets.GPG_PRIVATE_KEY }}
