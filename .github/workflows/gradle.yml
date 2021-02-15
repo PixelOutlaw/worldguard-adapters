@@ -121,7 +121,7 @@ jobs:
       - name: Run Semantic Release
         run: |
           npm ci
-          npm run semantic-release
+          npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }}
           ORG_GRADLE_PROJECT_signingKey: ${{ secrets.GPG_PRIVATE_KEY }}
