@@ -11,7 +11,7 @@ gradle.allprojects {
     group = "io.pixeloutlaw.worldguard"
 
     repositories {
-        mavenCentral()
+        jcenter()
         maven {
             url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots")
         }
