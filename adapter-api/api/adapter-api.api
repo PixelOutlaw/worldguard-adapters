@@ -1,0 +1,6 @@
+public abstract interface class com/tealcube/minecraft/spigot/worldguard/adapters/IWorldGuardAdapter {
+	public abstract fun isFlagAllowAtLocation (Lorg/bukkit/Location;Ljava/lang/String;)Z
+	public abstract fun isFlagDenyAtLocation (Lorg/bukkit/Location;Ljava/lang/String;)Z
+	public abstract fun registerFlag (Ljava/lang/String;)V
+}
+

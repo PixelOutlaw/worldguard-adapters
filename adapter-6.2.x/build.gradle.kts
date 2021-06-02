@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm")
+    id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.5.0"
 }
 
 dependencies {
@@ -8,5 +9,5 @@ dependencies {
 
     api(project(":adapter-api"))
 
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:_")
+    implementation(kotlin("stdlib-jdk8"))
 }

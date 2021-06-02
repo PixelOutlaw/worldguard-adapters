@@ -1,6 +1,6 @@
 plugins {
     kotlin("jvm")
-    kotlin("kapt")
+    id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.5.0"
 }
 
 dependencies {
@@ -9,6 +9,6 @@ dependencies {
     api(project(":adapter-6.2.x"))
     api(project(":adapter-7.0.x"))
 
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:_")
+    implementation(kotlin("stdlib-jdk8"))
     implementation("io.pixeloutlaw:kindling:_")
 }

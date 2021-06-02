@@ -1,0 +1,7 @@
+public final class com/tealcube/minecraft/spigot/worldguard/adapters/v70x/WorldGuardAdapter : com/tealcube/minecraft/spigot/worldguard/adapters/IWorldGuardAdapter {
+	public static final field INSTANCE Lcom/tealcube/minecraft/spigot/worldguard/adapters/v70x/WorldGuardAdapter;
+	public fun isFlagAllowAtLocation (Lorg/bukkit/Location;Ljava/lang/String;)Z
+	public fun isFlagDenyAtLocation (Lorg/bukkit/Location;Ljava/lang/String;)Z
+	public fun registerFlag (Ljava/lang/String;)V
+}
+
